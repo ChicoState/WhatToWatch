@@ -65,7 +65,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'wsgi.application'
+WSGI_APPLICATION = 'whattowatch.wsgi.application'
+ASGI_APPLICATION = 'whattowatch.routing.application'
 
 
 # Database
