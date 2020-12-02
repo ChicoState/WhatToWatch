@@ -22,19 +22,22 @@ SECRET_KEY = 'k!^)9(3r^b)r!mlq91wtqa=e4visjd_7qf1z$@kevc@*@@(ui4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['viditdhaka.pythonanywhere.com']
+ALLOWED_HOSTS = ['viditdhaka.pythonanywhere.com',
+                 '127.0.0.1',]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'watch'
+    'watch',
+    
 ]
 
 MIDDLEWARE = [
@@ -67,6 +70,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'whattowatch.wsgi.application'
 ASGI_APPLICATION = 'whattowatch.routing.application'
+
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+           "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
+>>>>>>> 09cd24bddcbe9a6cc8ce396511e84d61425a06e5
 
 
 # Database
@@ -118,3 +132,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/viditdhaka/WhatToWatch/static'
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
