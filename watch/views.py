@@ -1,10 +1,10 @@
+import json
 from django.contrib.auth import login, logout
 from django.shortcuts import render , redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
-from imdb import IMDb
 from django.utils.safestring import mark_safe
-import json
+from imdb import IMDb
 from . import models
 from . import forms
 
@@ -23,9 +23,9 @@ def home(request):
         if form_search.is_valid():
             search = movies_data.search_movie(form_search.cleaned_data["search_field"])
             top_movie_id = search[0].getID()
-            newURL = "/movie/" + top_movie_id + "/"
+            new_url = "/movie/" + top_movie_id + "/"
             form_search = forms.SearchForm()
-            return redirect(newURL)
+            return redirect(new_url)
     else:
         form_search = forms.SearchForm()
 
@@ -50,9 +50,9 @@ def specific_movie(request, movie_id):
             print(search)
             print(search[0].keys())
             top_movie_id = search[0].getID()
-            newURL = "/movie/" + top_movie_id + "/"
+            new_url = "/movie/" + top_movie_id + "/"
             form_search = forms.SearchForm()
-            return redirect(newURL)
+            return redirect(new_url)
     else:
         form_search = forms.SearchForm()
 
@@ -110,7 +110,8 @@ def login_view(request):
             return redirect('/home/')
     else:
         form = AuthenticationForm()
-    return render(request,'login.html',{'name':'LineUp login Signup','form':form, "title":'WTW Login'})
+    return render(request,'login.html',{'name':'LineUp login Signup',
+                  'form':form, "title":'WTW Login'})
 
 @login_required(login_url="/login/")
 def logout_view(request):
@@ -130,7 +131,7 @@ def signup(request):
         "title":"WTW Register",
         }
     return render(request, "signup.html", context=context)
-def Letschat(request):
+def lets_chat(request):
     return render(request, 'index.html')
 
 def room(request, room_name):
