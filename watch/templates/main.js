@@ -16,7 +16,7 @@ $("#status-options ul li").click(function() {
 	$("#status-busy").removeClass("active");
 	$("#status-offline").removeClass("active");
 	$(this).addClass("active");
-	
+
 	if($("#status-online").hasClass("active")) {
 		$("#profile-img").addClass("online");
 	} else if ($("#status-away").hasClass("active")) {
@@ -28,7 +28,7 @@ $("#status-options ul li").click(function() {
 	} else {
 		$("#profile-img").removeClass();
 	};
-	
+
 	$("#status-options").removeClass("active");
 });
 

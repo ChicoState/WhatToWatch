@@ -1,6 +1,6 @@
 
 {% load static %}
-<script src="{% static 'reconnecting-websocket.js' %}"></script> 
+<script src="{% static 'reconnecting-websocket.js' %}"></script>
 
 <!DOCTYPE html>
 <html>
@@ -170,7 +170,7 @@
       var pTag = document.createElement('p');
       pTag.textContent = data.content;
       imgTag.src = 'http://emilcarlsson.se/assets/mikeross.png';
-      
+
       if (author === username) {
         msgListTag.className = 'sent';
       } else {
