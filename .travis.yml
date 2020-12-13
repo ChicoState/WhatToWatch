@@ -7,3 +7,4 @@ script:
     - python -V
    # - pylint --load-plugins pylint_django --disable=missing-docstring ./watch
    #  - pylint --load-plugins pylint_django --disable=missing-docstring ./whattowatc
+after_success: coveralls
