@@ -1,6 +1,6 @@
 <img src="LogoColor.png" alt="logo" width="200">
 
-# What To Watch [![Build Status](https://travis-ci.com/chodges7/WhatToWatch.svg?branch=master)](https://travis-ci.com/chodges7/WhatToWatch)
+# What To Watch [![Build Status](https://travis-ci.com/Lpecson/WhatToWatch.svg?branch=master)](https://travis-ci.com/Lpecson/WhatToWatch)
 
 ## Coverage [![Coverage Status](https://coveralls.io/repos/github/Lpecson/WhatToWatch/badge.svg?branch=master)](https://coveralls.io/github/Lpecson/WhatToWatch?branch=master)
 
