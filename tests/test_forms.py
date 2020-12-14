@@ -48,3 +48,18 @@ class TestForms(TestCase):
 	def test_pictureForm_Default(self):
 		form = PictureForm(data={})
 		self.assertTrue(form.is_valid())
+		
+	def test_registrationForm_valid(self):
+		form = RegistrationForm(data={
+			'email': 'email@gmail.com'
+			'profile_bio': 'this bio'
+			'profile_fname': 'Sam'
+			'profile_lname': 'Smith'
+			'profile_image': ''
+		})
+		self.assertTrue(form.is_valid())
+		
+	def test_registrationForm_invalid(self):
+		form = RegistrationForm(data={})
+		self.assertFalse(form.is_valid())
+		
