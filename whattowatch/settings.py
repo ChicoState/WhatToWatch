@@ -80,7 +80,6 @@ CHANNEL_LAYERS = {
         },
     },
 }
-}
 
 
 # Database
