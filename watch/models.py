@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
+
 class UserM(models.Model):
     username = models.CharField(max_length=50)
     email = models.CharField(max_length=100)
@@ -20,7 +21,8 @@ class Profile(models.Model):
     def __str__(self):
         name = self.profile_fname + " " + self.profile_lname
         return name
-User = get_user_model()
+    User = get_user_model()
+
 class Message(models.Model):
     author = models.ForeignKey(User, related_name='author_messages', on_delete=models.CASCADE)
     content = models.TextField()
@@ -29,5 +31,5 @@ class Message(models.Model):
     def __str__(self):
         return self.author.username
 
-    def last_10_messages():
+    def last_10_messages(self):
         return Message.objects.order_by('-timestamp').all()[:10]
