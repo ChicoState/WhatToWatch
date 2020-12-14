@@ -7,7 +7,7 @@ install:
 
 script:
     - python -V
-    - coverage run --source=. manage.py watch/test
+    - coverage run --source=. manage.py watch.test
    # - pylint --load-plugins pylint_django --disable=missing-docstring ./watch
    # - pylint --load-plugins pylint_django --disable=missing-docstring ./whattowatch
 
