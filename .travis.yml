@@ -8,8 +8,8 @@ install:
 script:
     - python -V
    # - coverage run --source=. manage.py watch.test
-   # - pylint --load-plugins pylint_django --disable=missing-docstring ./watch
-   # - pylint --load-plugins pylint_django --disable=missing-docstring ./whattowatch
+    - pylint --load-plugins pylint_django --disable=missing-docstring ./watch
+    - pylint --load-plugins pylint_django --disable=missing-docstring ./whattowatch
 
 after_success:
   coveralls
