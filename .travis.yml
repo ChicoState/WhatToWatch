@@ -1,7 +1,9 @@
 language: python
 os: linux
+service_name: travis-pro
+repo_token: hADMbgdu4bx8M0DQjASXBlnfVHUJGuu0n
 
 script:
     - python -V
-    - pylint --load-plugins pylint_django --disable=missing-docstring ./watch
-    - pylint --load-plugins pylint_django --disable=missing-docstring ./whattowatch
+   # - pylint --load-plugins pylint_django --disable=missing-docstring ./watch
+   #  - pylint --load-plugins pylint_django --disable=missing-docstring ./whattowatch
