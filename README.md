@@ -1,8 +1,6 @@
 <img src="LogoColor.png" alt="logo" width="200">
 
-# What To Watch [![Build Status](https://travis-ci.com/Lpecson/WhatToWatch.svg?branch=master)](https://travis-ci.com/Lpecson/WhatToWatch)
-
-## Coverage [![Coverage Status](https://coveralls.io/repos/github/Lpecson/WhatToWatch/badge.svg?branch=master)](https://coveralls.io/github/Lpecson/WhatToWatch?branch=master)
+# What To Watch [![Build Status](https://travis-ci.com/Lpecson/WhatToWatch.svg?branch=master)](https://travis-ci.com/Lpecson/WhatToWatch) [![Coverage Status](https://coveralls.io/repos/github/ChicoState/WhatToWatch/badge.svg?branch=master)](https://coveralls.io/github/ChicoState/WhatToWatch?branch=master)
 
 ## Developers
 * Product Owner: Christian Hodges, [chodges7](https://github.com/chodges7)
